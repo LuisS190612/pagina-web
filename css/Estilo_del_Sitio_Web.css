@@ -1,0 +1,498 @@
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 70px; /* para no tapar el monu cuando seleccionamos una parte de sitio*/
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+  
+}
+
+body {
+    line-height: 1.6;
+    color: #333;
+    background-color: #f2f4f6;
+    overflow-x: hidden; /* NUEVO (para el diseño responcive)*/
+}
+
+.contenedor {
+    max-width: 1000px;
+    width: 100%; /* NUEVO */
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* titulos de las secciones */
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #1a252f;
+    font-size: clamp(1.8rem, 3vw, 2.5rem); /* NUEVO */
+}
+
+/* la parte del menu letras y fondo */
+header {
+    background-color: #ea740d;
+    color: #f9f9f9;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 5%;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.08);
+    /* ELIMINAR: margin-left: -60px; */
+    
+}
+
+header .logo h1 {
+    font-size: clamp(16px, 2vw, 22px); /* NUEVO */
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap; /* NUEVO */
+    gap: 15px; /* NUEVO */
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    color: #f6f0f0;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 14px;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #050200;
+}
+
+/* NUEVO: Hace que cada sección ocupe toda la pantalla y evita que el header tape el contenido */
+section {
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    /* Ajusta este valor global según el espacio que quieras dejar debajo del menú fijo */
+    padding-top: 100px; 
+    padding-bottom: 40px;
+    padding-left: 20px;
+    padding-right: 20px;
+    box-sizing: border-box;
+}
+
+    /* Sección Inicio (Hero) */
+    #inicio h2 {
+        margin-top: 20px;
+    }
+
+    /* Sección Productos */
+    #productos h2 {
+        margin-top: 20px; /* Cambia este valor a los píxeles exactos que desees */
+    }
+
+    /* Sección Nosotros */
+    #nosotros h2 {
+        margin-top: 30px; /* Cambia este valor a los píxeles exactos que desees */
+    }
+
+    /* Sección Servicios */
+    #servicios h2 {
+        margin-top: 20px; /* Cambia este valor a los píxeles exactos que desees */
+    }
+
+    /* Sección Testimonios */
+    #testimonios h2 {
+        margin-top: 20px; /* Cambia este valor a los píxeles exactos que desees */
+    }
+
+    /* Sección Contacto */
+    #contacto h2 {
+        margin-top: 20px; /* Cambia este valor a los píxeles exactos que desees */
+    }
+
+/* ==========================================
+   HERO CON SLIDER DE FONDO DINÁMICO
+   ========================================== */
+
+/* Contenedor principal de la pantalla de inicio */
+.hero {
+    position: relative; /* Permite posicionar elementos hijos de forma absoluta dentro de él */
+    text-align: center;
+    color: #ffffff;
+    width: 100%;
+    min-height: 100vh; /* Ocupa toda la altura de la pantalla */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centra el contenido verticalmente */
+    align-items: center;     /* Centra el contenido horizontalmente */
+    padding: 0 20px;
+    overflow: hidden;        /* Oculta las partes de las imágenes del slider que salgan del contenedor */
+}
+
+/* Contenedor que agrupa y mueve las imágenes de fondo */
+.hero-slider {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 300%; /* El ancho se multiplica por el número de imágenes (3 imágenes = 300%) */
+    height: 100%;
+    display: flex;
+    z-index: 1;  /* Coloca el slider en la capa más baja (fondo) */
+    animation: heroSliderAnim 15s infinite ease-in-out; /* Animación de movimiento automático */
+}
+
+/* Cada diapositiva individual dentro del slider */
+.hero-slide {
+    width: 33.333%; /* Divide el 300% total entre las 3 imágenes (100% cada una) */
+    height: 100%;
+}
+
+/* Ajuste de la imagen para que llene perfectamente el espacio */
+.hero-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Evita que la imagen se deforme al rellenar el espacio */
+    display: block;
+}
+
+/* Capa oscura semitransparente que se coloca sobre las imágenes de fondo */
+.hero::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Oscurece el fondo un 50% para mejorar la lectura */
+    z-index: 2; /* Se coloca por encima del slider pero por debajo del texto */
+}
+
+/* Contenedor del texto de bienvenida (Título y párrafo) */
+.hero-content {
+    position: relative;
+    z-index: 3; /* Asegura que el texto esté siempre visible en la capa superior */
+}
+
+/* Estilos del título principal del hero */
+.hero h1 {                  
+    color: #ffffff;
+    font-size: clamp(2.2rem, 5vw, 4rem); /* Tamaño adaptable según la pantalla */
+    margin-bottom: 15px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Sombra para resaltar el texto */
+}
+
+/* Estilos del párrafo descriptivo del hero */
+.hero p {
+    font-size: clamp(1rem, 2.5vw, 1.5rem);
+    margin-bottom: 25px;
+    color: #fdfefe;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+/* ==========================================
+   ANIMACIÓN DEL SLIDER DE FONDO
+   ========================================== */
+@keyframes heroSliderAnim {
+    0%   { transform: translateX(0%); }       /* Muestra la 1era imagen */
+    28%  { transform: translateX(0%); }       /* Pausa en la 1era imagen */
+    33%  { transform: translateX(-33.333%); } /* Se desliza a la 2da imagen */
+    61%  { transform: translateX(-33.333%); } /* Pausa en la 2da imagen */
+    66%  { transform: translateX(-66.666%); } /* Se desliza a la 3era imagen */
+    95%  { transform: translateX(-66.666%); } /* Pausa en la 3era imagen */
+    100% { transform: translateX(0%); }       /* Regresa a la 1era imagen de forma fluida */
+}
+
+
+
+/* ==========================================
+   GALERÍA DE PRODUCTOS
+   ========================================== */
+#productos .carrusel-contenedor {
+    display: flex;
+    width: 1500px;
+    height: 700px;
+    overflow: hidden;
+}
+
+#productos .carrusel-item {
+    position: relative;
+    width: 0px;
+    flex-grow: 1;
+    background-size: cover;
+    background-position: center;
+    opacity: 0.7;
+    transition: 0.5s ease;
+    text-decoration: none; 
+    display: flex;
+    align-items: flex-end;
+}
+
+#productos .carrusel-item:hover {
+    width: 400px;
+    opacity: 1;
+    filter: contrast(130%);
+    cursor: pointer;
+}
+
+/* Contenedor general del texto en la base de la tarjeta */
+#productos .carrusel-texto {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 15px;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0));
+    color: #ffffff;
+    box-sizing: border-box;
+}
+
+/* El título SIEMPRE es visible permanentemente */
+#productos .carrusel-texto h3 {
+    margin: 0;
+    font-size: 20px;
+    color: #ff9800;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.9);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* La descripción se mantiene oculta por defecto */
+#productos .carrusel-texto p {
+    margin: 8px 0 0 0;
+    font-size: 14px;
+    line-height: 1.3;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.9);
+    opacity: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: opacity 0.4s ease, max-height 0.4s ease;
+}
+
+/* Al pasar el cursor (hover), la descripción se despliega suavemente */
+#productos .carrusel-item:hover .carrusel-texto p {
+    opacity: 1;
+    max-height: 100px;
+}
+
+/* TARJETAS */
+.grid-tarjetas {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 10px;
+}
+
+.tarjeta {
+    background: #ff6a00;
+    color: #ffffff;
+    padding: 24px;
+    border-radius: 8px;
+    flex: 1;
+    min-width: 250px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.tarjeta h3 {
+    color: #ffffff;
+    margin-bottom: 10px;
+}
+
+.tarjeta .autor {
+    margin-top: 15px;
+    font-style: italic;
+}
+
+
+/* NUEVO: Media query para celulares */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    nav ul {
+        justify-content: center;
+        margin-top: 8px;
+    }
+
+    nav ul li {
+        margin-left: 0;
+    }
+
+    html {
+        scroll-padding-top: 110px;
+    }
+} /* <-- AQUÍ TERMINA TU ARCHIVO ACTUAL (LÍNEA 317) */
+
+/* ==========================================
+   NUEVO: ADAPTACIÓN DEL CARRUSEL PARA MÓVILES
+   ========================================== */
+@media (max-width: 768px) {
+    #productos .carrusel-contenedor {
+        width: 100% !important;
+        height: auto !important;
+        flex-direction: column !important;
+        gap: 10px;
+    }
+
+    #productos .carrusel-item {
+        width: 100% !important;
+        height: 120px !important;
+        opacity: 1 !important;
+    }
+
+    #productos .carrusel-texto {
+        opacity: 1 !important;
+        position: relative !important;
+        background: linear-gradient(to top, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.3));
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    #productos .carrusel-texto p {
+        opacity: 1 !important;
+        max-height: none !important;
+    }
+}
+
+
+
+/* FORMULARIO */
+form {
+    background: white;
+    padding: 25px;
+    border-radius: 8px;
+    max-width: 600px;
+    margin: 10px auto 0;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+form label {
+    display: block;
+    margin-top: 12px;
+    font-weight: bold;
+}
+
+form input, form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    outline: none;
+}
+
+form input:focus, form textarea:focus {
+    border-color: #ff6a00;
+}
+
+form button {
+    margin-top: 20px;
+    width: 100%;
+    padding: 12px;
+    background-color: #27ae60;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+form button:hover {
+    background-color: #219653;
+}
+
+/* REDES SOCIALES */
+.redes-contenedor {
+    margin-top: 40px;
+    text-align: center;
+}
+
+.redes-contenedor h3 {
+    margin-bottom: 20px;
+    color: #1a252f;
+}
+
+.redes {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+.red-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    transition: transform 0.2s ease;
+}
+
+.red-item:hover {
+    transform: translateY(-3px);
+    color: #ff6a00;
+}
+
+.red-item img {
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+/* FOOTER */
+footer {
+    background-color: #1a252f;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+}
+
+footer a {
+    color: #3498db;
+    text-decoration: none;
+}
+
+/* NUEVO: Media query para celulares */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    nav ul {
+        justify-content: center;
+        margin-top: 8px;
+    }
+
+    nav ul li {
+        margin-left: 0;
+    }
+
+    html {
+        scroll-padding-top: 110px;
+    }
+}
