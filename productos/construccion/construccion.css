@@ -1,0 +1,456 @@
+/* --- Resets y Estilos Generales --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background-color: #f8f9fa;
+    color: #333333;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+}
+
+/* --- Header / Encabezado Superior --- */
+.main-header {
+    background-color: #ffffff;
+    border-bottom: 2px solid #e0e0e0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px 20px;
+}
+
+/* --- Barra de Búsqueda --- */
+.search-bar {
+    display: flex;
+    flex: 0 1 550px;
+    height: 40px;
+}
+
+.search-bar input {
+    width: 100%;
+    padding: 0 15px;
+    border: 2px solid #0084c7;
+    border-right: none;
+    border-radius: 4px 0 0 4px;
+    outline: none;
+    font-size: 0.95rem;
+}
+
+.search-bar button {
+    width: 50px;
+    background-color: #0084c7;
+    border: 2px solid #0084c7;
+    color: #ffffff;
+    border-radius: 0 4px 4px 0;
+    cursor: pointer;
+    font-size: 1.1rem;
+    transition: background-color 0.2s;
+}
+
+.search-bar button:hover {
+    background-color: #00699e;
+}
+
+/* --- Menú de Navegación (Vista Normal en Computadora) --- */
+.color_menu {
+    background-color: #ea740d;
+    color: #f9f9f9;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 5%;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.08);
+    position: relative;
+}
+
+.color_menu .logo h1 {
+    font-size: clamp(16px, 2vw, 22px);
+    color: #ffffff;
+    margin: 0;
+}
+
+/* Checkbox y botón hamburguesa ocultos en pantalla grande */
+.nav-toggle,
+.menu-toggle-btn {
+    display: none;
+}
+
+/* Lista horizontal normal en computadora */
+.color_menu ul.nav-links {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    align-items: center;
+}
+
+.color_menu ul.nav-links li {
+    margin-left: 15px;
+}
+
+.color_menu ul.nav-links li a {
+    color: #f6f0f0;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 14px;
+    transition: color 0.3s ease;
+}
+
+.color_menu ul.nav-links li a:hover {
+    color: #050200;
+}
+
+/* --- FILTROS DE LA BARRA LATERAL (Pura CSS) --- */
+.filter-radio {
+    display: none;
+}
+
+.filter-label {
+    font-size: 0.9rem;
+    color: #ea740d;
+    font-weight: 500;
+    cursor: pointer;
+    display: block;
+    margin-bottom: 8px;
+    transition: color 0.2s;
+}
+
+.filter-label:hover {
+    color: #c45a13;
+    text-decoration: underline;
+}
+
+/* Lógica de ocultar/mostrar productos según el filtro seleccionado */
+.product-card {
+    display: flex;
+}
+
+#filtro-orion:checked ~ .store-layout .product-card:not([data-marca="orion"]) {
+    display: none;
+}
+
+#filtro-acero:checked ~ .store-layout .product-card:not([data-material="acero"]) {
+    display: none;
+}
+
+#filtro-galicia:checked ~ .store-layout .product-card:not([data-marca="galicia"]) {
+    display: none;
+}
+
+/* --- Estructura del Catálogo --- */
+.store-layout {
+    max-width: 1300px;
+    margin: 30px auto 20px;
+    padding: 0 20px;
+}
+
+.page-title {
+    font-size: 1.8rem;
+    color: #ea740d;
+    text-align: center;
+    margin-bottom: 5px;
+}
+
+.subtitle {
+    text-align: center;
+    color: #555555;
+    font-size: 1.05rem;
+    margin-bottom: 30px;
+}
+
+.catalog-container {
+    display: grid;
+    grid-template-columns: 240px 1fr;
+    gap: 30px;
+}
+
+/* --- Barra Lateral de Filtros --- */
+.sidebar-filters h2 {
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+    color: #222222;
+}
+
+.filter-group h3 {
+    font-size: 1rem;
+    color: #444444;
+    margin-bottom: 10px;
+}
+
+.filter-group ul li {
+    margin-bottom: 8px;
+}
+
+/* --- Toolbar de Productos --- */
+.products-toolbar {
+    border-bottom: 2px solid #ea740d;
+    padding-bottom: 10px;
+    margin-bottom: 25px;
+    font-size: 0.9rem;
+    color: #555555;
+}
+
+/* --- Grilla de Tarjetas de Producto y Efecto Flip 3D --- */
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 25px;
+}
+
+.product-card {
+    background-color: transparent;
+    min-height: 330px;
+    perspective: 1000px;
+    flex-direction: column;
+}
+
+/* Ocultar el checkbox de control de giro */
+.flip-checkbox {
+    display: none;
+}
+
+/* Contenedor interno que realiza la rotación */
+.card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    flex-grow: 1;
+    transition: transform 0.6s cubic-bezier(0.4, 0.2, 0.2, 1);
+    transform-style: preserve-3d;
+}
+
+/* Giro activado al marcar el checkbox correspondiente */
+.flip-checkbox:checked + .card-inner {
+    transform: rotateY(180deg);
+}
+
+/* Caras frontal y trasera de la tarjeta */
+.card-front,
+.card-back {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #ffffff;
+    border: 1px solid #e8e8e8;
+    border-radius: 6px;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    transition: box-shadow 0.2s, border-color 0.2s;
+}
+
+.product-card:hover .card-front,
+.product-card:hover .card-back {
+    box-shadow: 0 4px 12px rgba(234, 116, 13, 0.15);
+    border-color: #ea740d;
+}
+
+.card-back {
+    transform: rotateY(180deg);
+    background-color: #fffaf5;
+    border-color: #ea740d;
+}
+
+.product-image {
+    width: 100%;
+    height: 165px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 12px;
+}
+
+.product-image img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+.product-info {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.product-title {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #333333;
+    line-height: 1.35;
+    margin-bottom: 8px;
+    flex-grow: 1;
+    transition: color 0.2s;
+}
+
+.product-card:hover .product-title {
+    color: #ea740d;
+}
+
+.stock-status {
+    font-size: 0.78rem;
+    color: #666666;
+    font-style: italic;
+    margin-bottom: 8px;
+}
+
+/* Estilos de la cara posterior (Descripción) */
+.back-title {
+    font-size: 0.95rem;
+    color: #ea740d;
+    border-bottom: 1px solid #f0d5be;
+    padding-bottom: 8px;
+    margin-bottom: 10px;
+}
+
+.product-desc {
+    font-size: 0.85rem;
+    color: #444444;
+    line-height: 1.45;
+    flex-grow: 1;
+    overflow-y: auto;
+}
+
+/* Botones de acción "Ver descripción" y "Volver" */
+.btn-flip {
+    display: block;
+    width: 100%;
+    text-align: center;
+    background-color: #ea740d;
+    color: #ffffff;
+    font-size: 0.85rem;
+    font-weight: bold;
+    padding: 8px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 10px;
+    user-select: none;
+    transition: background-color 0.2s;
+}
+
+.btn-flip:hover {
+    background-color: #c45a13;
+}
+
+.btn-flip.btn-back {
+    background-color: #333333;
+}
+
+.btn-flip.btn-back:hover {
+    background-color: #111111;
+}
+
+/* --- Footer --- */
+.main-footer {
+    background-color: #222222;
+    color: #ffffff;
+    text-align: center;
+    padding: 20px;
+    margin-top: 50px;
+    font-size: 0.9rem;
+    border-top: 4px solid #ea740d;
+}
+
+/* --- Activación del Menú Hamburguesa (Pantallas menores a 992px) --- */
+@media (max-width: 992px) {
+    .menu-toggle-btn {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 26px;
+        height: 19px;
+        background: transparent;
+        border: none;
+        cursor: pointer;
+        padding: 0;
+    }
+
+    .menu-toggle-btn span {
+        display: block;
+        width: 100%;
+        height: 3px;
+        background-color: #ffffff;
+        border-radius: 2px;
+        transition: transform 0.3s ease, opacity 0.3s ease;
+    }
+
+    .nav-toggle:checked + .menu-toggle-btn span:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .nav-toggle:checked + .menu-toggle-btn span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .nav-toggle:checked + .menu-toggle-btn span:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
+    .color_menu ul.nav-links {
+        display: none;
+        flex-direction: column;
+        align-items: flex-start;
+        width: 100%;
+        background-color: #ea740d;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        padding: 15px 5%;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.15);
+        z-index: 1100;
+        gap: 14px;
+    }
+
+    .color_menu ul.nav-links li {
+        margin-left: 0;
+        width: 100%;
+    }
+
+    .nav-toggle:checked ~ ul.nav-links {
+        display: flex;
+    }
+}
+
+/* --- Adaptabilidad Responsive para Móviles (Pantallas menores a 768px) --- */
+@media (max-width: 768px) {
+    .header-container {
+        padding: 10px 15px;
+    }
+
+    .search-bar {
+        flex: 1;
+        width: 100%;
+        height: 40px;
+    }
+
+    .catalog-container {
+        grid-template-columns: 1fr;
+    }
+
+    .sidebar-filters {
+        border-bottom: 1px solid #dddddd;
+        padding-bottom: 20px;
+    }
+}

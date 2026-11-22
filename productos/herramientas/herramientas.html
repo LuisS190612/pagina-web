@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Productos - Ferremateriales Casa Blanca C.A</title>
+    <link rel="icon" href="../../img/favicon/LogoFerrematerialesCasablancaC.A.png">
+    <link rel="stylesheet" href="herramientas.css">
+    <!-- Iconos de FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- Encabezado Principal -->
+    <header class="main-header">
+        
+        <!-- Menú de Navegación Responsivo (Puro HTML y CSS) -->
+        <nav>
+            <div class="color_menu">
+                <div class="logo">
+                    <h1>Ferremateriales Casa Blanca C.A</h1>
+                </div>
+
+                <!-- Checkbox oculto para controlar el menú desplegable -->
+                <input type="checkbox" id="nav-toggle" class="nav-toggle">
+                
+                <!-- Botón hamburguesa (solo las 3 rayitas blancas) -->
+                <label for="nav-toggle" class="menu-toggle-btn" aria-label="Abrir menú">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </label>
+
+                <!-- Lista de enlaces -->
+                <ul class="nav-links">
+                    <li><strong><a href="../../Sitio_Web_Ferremateriales_Casa_Blanca.html"><i class="fa-solid fa-house"></i> Volver a Inicio</a></strong></li>
+                    <li><strong><a href="../electricidad/electricidad.html">Electricidad</a></strong></li>
+                    <li><strong><a href="../plomeria/plomeria.html">Plomería</a></strong></li>
+                    <li><strong><a href="../construccion/construccion.html">Construcción</a></strong></li>
+                    <li><strong><a href="herramientas.html">Herramientas</a></strong></li>
+                    <li><strong><a href="../ferreteria/ferreteria.html">Ferretería General</a></strong></li>
+                </ul>
+            </div>
+        </nav>
+
+        <div class="header-container">
+            <!-- Barra de búsqueda -->
+            <div class="search-bar">
+                <input type="text" placeholder="Buscar en toda la tienda...">
+                <button type="button" aria-label="Buscar"><i class="fa-solid fa-magnifying-glass"></i></button>
+            </div>
+        </div>
+
+    </header>
+
+    <!-- Inputs de radio ocultos para controlar el filtrado de la barra lateral por CSS -->
+    <input type="radio" name="filtro-tienda" id="filtro-todos" checked class="filter-radio">
+    <input type="radio" name="filtro-tienda" id="filtro-orion" class="filter-radio">
+    <input type="radio" name="filtro-tienda" id="filtro-acero" class="filter-radio">
+    <input type="radio" name="filtro-tienda" id="filtro-galicia" class="filter-radio">
+
+    <!-- Contenido Principal -->
+    <main class="store-layout">
+        <h1 class="page-title">Herramientas</h1>
+        <p class="subtitle">Organice su Electricidad : Compre Accesorios para la Instalacion Eléctricas</p>
+
+        <div class="catalog-container">
+            <!-- Barra Lateral de Filtros Interactiva (Pura CSS) -->
+            <aside class="sidebar-filters">
+                <h2>Comprar por</h2>
+                <div class="filter-group">
+                    <h3>Opciones de compra</h3>
+                    <ul>
+                        <li><label for="filtro-todos" class="filter-label">Ver todos</label></li>
+                        <li><label for="filtro-orion" class="filter-label">Marca: Orión</label></li>
+                        <li><label for="filtro-acero" class="filter-label">Material: Acero</label></li>
+                        <li><label for="filtro-galicia" class="filter-label">Marca: Galicia</label></li>
+                    </ul>
+                </div>
+            </aside>
+
+            <!-- Sección de Lista de Productos -->
+            <section class="products-section">
+                <div class="products-toolbar">
+                    <span class="item-count">8 artículos</span>
+                </div>
+
+                <!-- Grilla de Tarjetas de Productos -->
+                <div class="products-grid">
+                    
+                    <!-- Producto 1 -->
+                    <article class="product-card" data-marca="orion" data-material="acero">
+                        <input type="checkbox" id="flip-1" class="flip-checkbox">
+                        <div class="card-inner">
+                            <div class="card-front">
+                                <div class="product-image">
+                                    <img src="img/herremientas1.jfif" alt="Set de accesorios de baño 3 piezas mate mármol">
+                                </div>
+                                <div class="product-info">
+                                    <h3 class="product-title">Set de accesorios Orión (Acero)</h3>
+                                    <label for="flip-1" class="btn-flip">Ver descripción</label>
+                                </div>
+                            </div>
+                            <div class="card-back">
+                                <h3 class="back-title">Set de accesorios Orión (Acero)</h3>
+                                <p class="product-desc">Fabricado en acero inoxidable de alta resistencia. Ideal para instalaciones duraderas y con acabado profesional garantizado.</p>
+                                <label for="flip-1" class="btn-flip btn-back">Volver</label>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Producto 2 -->
+                    <article class="product-card" data-marca="galicia" data-material="cromado">
+                        <input type="checkbox" id="flip-2" class="flip-checkbox">
+                        <div class="card-inner">
+                            <div class="card-front">
+                                <div class="product-image">
+                                    <img src="img/herremientas2.jfif" alt="Set de accesorios de baño 3 piezas mate gris">
+                                </div>
+                                <div class="product-info">
+                                    <h3 class="product-title">Set de accesorios Galicia (Cromado)</h3>
+                                    <label for="flip-2" class="btn-flip">Ver descripción</label>
+                                </div>
+                            </div>
+                            <div class="card-back">
+                                <h3 class="back-title">Set de accesorios Galicia (Cromado)</h3>
+                                <p class="product-desc">Acabado cromado brillante con alta protección anticorrosiva. Incluye piezas de fijación estándar para montaje rápido.</p>
+                                <label for="flip-2" class="btn-flip btn-back">Volver</label>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Producto 3 -->
+                    <article class="product-card" data-marca="orion" data-material="acero">
+                        <input type="checkbox" id="flip-3" class="flip-checkbox">
+                        <div class="card-inner">
+                            <div class="card-front">
+                                <div class="product-image">
+                                    <img src="img/herramientas.jpeg" alt="Set 3 accesorios para baño Orión acero inoxidable">
+                                </div>
+                                <div class="product-info">
+                                    <h3 class="product-title">Set 3 accesorios Orión (Acero)</h3>
+                                    <label for="flip-3" class="btn-flip">Ver descripción</label>
+                                </div>
+                            </div>
+                            <div class="card-back">
+                                <h3 class="back-title">Set 3 accesorios Orión (Acero)</h3>
+                                <p class="product-desc">Kit compuesto por 3 piezas reforzadas en acero cepillado. Soporta uso continuo bajo alta exigencia mecánica.</p>
+                                <label for="flip-3" class="btn-flip btn-back">Volver</label>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Producto 4 -->
+                    <article class="product-card" data-marca="galicia" data-material="cromado">
+                        <input type="checkbox" id="flip-4" class="flip-checkbox">
+                        <div class="card-inner">
+                            <div class="card-front">
+                                <div class="product-image">
+                                    <img src="img/ferreteria.jpg" alt="Set accesorios de baño Orión">
+                                </div>
+                                <div class="product-info">
+                                    <h3 class="product-title">Set accesorios Galicia</h3>
+                                    <label for="flip-4" class="btn-flip">Ver descripción</label>
+                                </div>
+                            </div>
+                            <div class="card-back">
+                                <h3 class="back-title">Set accesorios Galicia</h3>
+                                <p class="product-desc">Accesorios versátiles diseñados para labores de mantenimiento y adecuación de espacios residenciales o comerciales.</p>
+                                <label for="flip-4" class="btn-flip btn-back">Volver</label>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Producto 5 -->
+                    <article class="product-card" data-marca="aqua" data-material="metal">
+                        <input type="checkbox" id="flip-5" class="flip-checkbox">
+                        <div class="card-inner">
+                            <div class="card-front">
+                                <div class="product-image">
+                                    <img src="img/maquina.jpeg" alt="Set 5 accesorios para baño gris gunmetal Aqua Nuova Deluxe">
+                                </div>
+                                <div class="product-info">
+                                    <h3 class="product-title">Set 5 accesorios (descripción)</h3>
+                                    <label for="flip-5" class="btn-flip">Ver descripción</label>
+                                </div>
+                            </div>
+                            <div class="card-back">
+                                <h3 class="back-title">Set 5 accesorios (descripción)</h3>
+                                <p class="product-desc">Set metálico de 5 componentes de precisión con recubrimiento protector especial contra la humedad y el desgaste.</p>
+                                <label for="flip-5" class="btn-flip btn-back">Volver</label>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Producto 6 -->
+                    <article class="product-card" data-marca="galicia" data-material="cromado">
+                        <input type="checkbox" id="flip-6" class="flip-checkbox">
+                        <div class="card-inner">
+                            <div class="card-front">
+                                <div class="product-image">
+                                    <img src="img/electricidad.jpg" alt="Set 6 accesorios para baño cromado Galicia">
+                                </div>
+                                <div class="product-info">
+                                    <h3 class="product-title">Set 6 accesorios (descripción)</h3>
+                                    <span class="stock-status">Disponible en otras tiendas</span>
+                                    <label for="flip-6" class="btn-flip">Ver descripción</label>
+                                </div>
+                            </div>
+                            <div class="card-back">
+                                <h3 class="back-title">Set 6 accesorios (descripción)</h3>
+                                <p class="product-desc">Paquete extendido de 6 piezas cromadas. Consultar disponibilidad en sucursales asociadas.</p>
+                                <label for="flip-6" class="btn-flip btn-back">Volver</label>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Producto 7 -->
+                    <article class="product-card" data-marca="aqua" data-material="metal">
+                        <input type="checkbox" id="flip-7" class="flip-checkbox">
+                        <div class="card-inner">
+                            <div class="card-front">
+                                <div class="product-image">
+                                    <img src="img/plomeria.jfif" alt="Set 5 accesorios para baño dorado cepillado Aqua Nuova Deluxe">
+                                </div>
+                                <div class="product-info">
+                                    <h3 class="product-title">Set 5 accesorios (descripción)</h3>
+                                    <span class="stock-status">Disponible en otras tiendas</span>
+                                    <label for="flip-7" class="btn-flip">Ver descripción</label>
+                                </div>
+                            </div>
+                            <div class="card-back">
+                                <h3 class="back-title">Set 5 accesorios (descripción)</h3>
+                                <p class="product-desc">Acabado metálico cepillado de gran durabilidad y estética moderna para proyectos de instalación exigentes.</p>
+                                <label for="flip-7" class="btn-flip btn-back">Volver</label>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Producto 8 -->
+                    <article class="product-card" data-marca="orion" data-material="acero">
+                        <input type="checkbox" id="flip-8" class="flip-checkbox">
+                        <div class="card-inner">
+                            <div class="card-front">
+                                <div class="product-image">
+                                    <img src="img/herremientas1.jfif" alt="Set 4 accesorios para baño Orión negro acero inoxidable">
+                                </div>
+                                <div class="product-info">
+                                    <h3 class="product-title">Set 4 accesorios (descripción)</h3>
+                                    <span class="stock-status">Disponible en otras tiendas</span>
+                                    <label for="flip-8" class="btn-flip">Ver descripción</label>
+                                </div>
+                            </div>
+                            <div class="card-back">
+                                <h3 class="back-title">Set 4 accesorios (descripción)</h3>
+                                <p class="product-desc">Set de 4 piezas en acero inoxidable perteneciente a la serie Orión. Máxima resistencia ante la torsión y el uso continuo.</p>
+                                <label for="flip-8" class="btn-flip btn-back">Volver</label>
+                            </div>
+                        </div>
+                    </article>
+
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Pie de Página -->
+    <footer class="main-footer">
+        <p>© 2026 Ferremateriales Casa Blanca C.A. Todos los derechos reservados.</p>
+    </footer>
+
+</body>
+</html>
