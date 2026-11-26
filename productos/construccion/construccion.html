@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Productos - Ferremateriales Casa Blanca C.A</title>
+    <link rel="icon" href="../../img/favicon/LogoFerrematerialesCasablancaC.A.png">
+    <link rel="stylesheet" href="construccion.css">
+    <!-- Iconos de FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- Encabezado Principal -->
+    <header class="main-header">
+        
+        <!-- Menú de Navegación Responsivo (Puro HTML y CSS) -->
+        <nav>
+            <div class="color_menu">
+                <div class="logo">
+                    <h1>Ferremateriales Casa Blanca C.A</h1>
+                </div>
+
+                <!-- Checkbox oculto para controlar el menú desplegable -->
+                <input type="checkbox" id="nav-toggle" class="nav-toggle">
+                
+                <!-- Botón hamburguesa (solo las 3 rayitas blancas) -->
+                <label for="nav-toggle" class="menu-toggle-btn" aria-label="Abrir menú">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </label>
+
+                <!-- Lista de enlaces -->
+                <ul class="nav-links">
+                    <li><strong><a href="../../Sitio_Web_Ferremateriales_Casa_Blanca.html"><i class="fa-solid fa-house"></i> Volver a Inicio</a></strong></li>
+                    <li><strong><a href="../electricidad/electricidad.html">Electricidad</a></strong></li>
+                    <li><strong><a href="../plomeria/plomeria.html">Plomería</a></strong></li>
+                    <li><strong><a href="construccion.html">Construcción</a></strong></li>
+                    <li><strong><a href="../herramientas/herramientas.html">Herramientas</a></strong></li>
+                    <li><strong><a href="../ferreteria/ferreteria.html">Ferretería General</a></strong></li>
+                </ul>
+            </div>
+        </nav>
+
+        <div class="header-container">
+            <!-- Barra de búsqueda -->
+            <div class="search-bar">
+                <input type="text" placeholder="Buscar en toda la tienda...">
+                <button type="button" aria-label="Buscar"><i class="fa-solid fa-magnifying-glass"></i></button>
+            </div>
+        </div>
+
+    </header>
+
+    <!-- Inputs de radio ocultos para controlar el filtrado de la barra lateral por CSS -->
+    <input type="radio" name="filtro-tienda" id="filtro-todos" checked class="filter-radio">
+    <input type="radio" name="filtro-tienda" id="filtro-orion" class="filter-radio">
+    <input type="radio" name="filtro-tienda" id="filtro-acero" class="filter-radio">
+    <input type="radio" name="filtro-tienda" id="filtro-galicia" class="filter-radio">
+
+    <!-- Contenido Principal -->
+    <main class="store-layout">
+        <h1 class="page-title">Herramientas de Construcción</h1>
+        <p class="subtitle">Organice su Construcción : Compre Accesorios para la Construcción</p>
+
+        <div class="catalog-container">
+            <!-- Barra Lateral de Filtros Interactiva (Pura CSS) -->
+            <aside class="sidebar-filters">
+                <h2 class="titulo">Comprar por</h2>
+                <div class="filter-group">
+                    <h3 class="letras">Opciones de compra</h3>
+                    <ul>
+                        <li><label for="filtro-todos" class="filter-label">Ver todos</label></li>
+                        <li><label for="filtro-orion" class="filter-label">Marca: Orión</label></li>
+                        <li><label for="filtro-acero" class="filter-label">Material: Acero</label></li>
+                        <li><label for="filtro-galicia" class="filter-label">Marca: Galicia</label></li>
+                    </ul>
+                </div>
+            </aside>
+
+            <!-- Sección de Lista de Productos -->
+            <section class="products-section">
+                <div class="products-toolbar">
+                    <span class="item-count">8 artículos</span>
+                </div>
+
+                <!-- Grilla de Tarjetas de Productos -->
+                <div class="products-grid">
+                    
+                    <!-- Producto 1 -->
+                    <article class="product-card" data-marca="orion" data-material="acero">
+                        <input type="checkbox" id="flip-1" class="flip-checkbox">
+                        <div class="card-inner">
+                            <div class="card-front">
+                                <div class="product-image">
+                                    <img src="img/con1.jpg" alt="Saco de cemento gris Portland (42,5 kg)">
+                                </div>
+                                <div class="product-info">
+                                    <h3 class="product-title">Cabilla estriada 1/2" x 6 mts</h3>
+                                    <label for="flip-1" class="btn-flip">Ver descripción</label>
+                                </div>
+                            </div>
+                            <div class="card-back">
+                                <h3 class="back-title">Cabilla estriada 1/2" x 6 mts</h3>
+                                <p class="product-desc">Barra de refuerzo estructural utilizada en columnas, vigas, losas y fundaciones</p>
+                                <label for="flip-1" class="btn-flip btn-back">Volver</label>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Producto 2 -->
+                    <article class="product-card" data-marca="galicia" data-material="cromado">
+                        <input type="checkbox" id="flip-2" class="flip-checkbox">
+                        <div class="card-inner">
+                            <div class="card-front">
+                                <div class="product-image">
+                                    <img src="img/con2.jpg" alt="Cabilla de acero corrugado de 3/8 pulgada">
+                                </div>
+                                <div class="product-info">
+                                    <h3 class="product-title">Saco de cemento gris 42.5kg</h3>
+                                    <label for="flip-2" class="btn-flip">Ver descripción</label>
+                                </div>
+                            </div>
+                            <div class="card-back">
+                                <h3 class="back-title">Saco de cemento gris 42.5kg</h3>
+                                <p class="product-desc">El cemento gris es un cemento Portland fabricado a partir de clinker y materiales minerales, usado para producir concreto y morteros de alta resistencia.</p>
+                                <label for="flip-2" class="btn-flip btn-back">Volver</label>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Producto 3 -->
+                    <article class="product-card" data-marca="orion" data-material="acero">
+                        <input type="checkbox" id="flip-3" class="flip-checkbox">
+                        <div class="card-inner">
+                            <div class="card-front">
+                                <div class="product-image">
+                                    <img src="img/con3.jpg" alt="Bloque de concreto de 15 cm (15x20x40 cm)">
+                                </div>
+                                <div class="product-info">
+                                    <h3 class="product-title">Bloque de concreto de #15</h3>
+                                    <label for="flip-3" class="btn-flip">Ver descripción</label>
+                                </div>
+                            </div>
+                            <div class="card-back">
+                                <h3 class="back-title">Bloque de concreto de #15</h3>
+                                <p class="product-desc">Excelente para tu proyecto de levantar paredes estructurales y cerramientos.</p>
+                                <label for="flip-3" class="btn-flip btn-back">Volver</label>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Producto 4 -->
+                    <article class="product-card" data-marca="galicia" data-material="cromado">
+                        <input type="checkbox" id="flip-4" class="flip-checkbox">
+                        <div class="card-inner">
+                            <div class="card-front">
+                                <div class="product-image">
+                                    <img src="img/con4.jpg" alt="Malla electrosoldada (Truckson) de 4 mm">
+                                </div>
+                                <div class="product-info">
+                                    <h3 class="product-title">Malla electrosoldada (Truckson) de 50 mts</h3>
+                                    <label for="flip-4" class="btn-flip">Ver descripción</label>
+                                </div>
+                            </div>
+                            <div class="card-back">
+                                <h3 class="back-title">Malla electrosoldada (Truckson) de 50 mts</h3>
+                                <p class="product-desc">Para reforzar pisos de concreto, aceras y placas livianas.</p>
+                                <label for="flip-4" class="btn-flip btn-back">Volver</label>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Producto 5 -->
+                    <article class="product-card" data-marca="aqua" data-material="metal">
+                        <input type="checkbox" id="flip-5" class="flip-checkbox">
+                        <div class="card-inner">
+                            <div class="card-front">
+                                <div class="product-image">
+                                    <img src="img/con5.jpg" alt="Pego o adhesivo gris para cerámica (saco de 14 kg o 20 kg)">
+                                </div>
+                                <div class="product-info">
+                                    <h3 class="product-title">Pego o adhesivo gris para cerámica (saco de 14 kg)</h3>
+                                    <label for="flip-5" class="btn-flip">Ver descripción</label>
+                                </div>
+                            </div>
+                            <div class="card-back">
+                                <h3 class="back-title">Pego o adhesivo gris para cerámica (saco de 14 kg )</h3>
+                                <p class="product-desc">Mortero premezclado diseñado para fijar baldosas y revestimientos en pisos y paredes.</p>
+                                <label for="flip-5" class="btn-flip btn-back">Volver</label>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Producto 6 -->
+                    <article class="product-card" data-marca="galicia" data-material="cromado">
+                        <input type="checkbox" id="flip-6" class="flip-checkbox">
+                        <div class="card-inner">
+                            <div class="card-front">
+                                <div class="product-image">
+                                    <img src="img/con6.jpg" alt="Alambre dulce recocido calibre 18">
+                                </div>
+                                <div class="product-info">
+                                    <h3 class="product-title">Alambre dulce calibre 18 (750 gr)</h3>
+                                    <span class="stock-status">Disponible</span>
+                                    <label for="flip-6" class="btn-flip">Ver descripción</label>
+                                </div>
+                            </div>
+                            <div class="card-back">
+                                <h3 class="back-title">Alambre dulce calibre 18 (750 gr)</h3>
+                                <p class="product-desc">Alambre flexible indispensable para amarrar cabillas en armaduras de acero y fijar encofrados.</p>
+                                <label for="flip-6" class="btn-flip btn-back">Volver</label>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Producto 7 -->
+                    <article class="product-card" data-marca="aqua" data-material="metal">
+                        <input type="checkbox" id="flip-7" class="flip-checkbox">
+                        <div class="card-inner">
+                            <div class="card-front">
+                                <div class="product-image">
+                                    <img src="img/con7.jpg" alt="Carretilla metálica de construcción (rueda neumática o antipinchazo)">
+                                </div>
+                                <div class="product-info">
+                                    <h3 class="product-title">Carretilla metálica de construcción (rueda mazisa) Exxel</h3>
+                                    <span class="stock-status">Disponible</span>
+                                    <label for="flip-7" class="btn-flip">Ver descripción</label>
+                                </div>
+                            </div>
+                            <div class="card-back">
+                                <h3 class="back-title">Carretilla metálica de construcción (rueda mazisa) Exxel</h3>
+                                <p class="product-desc">Esencial para trasladar arena, piedra picada, mezcla y escombros en obra.</p>
+                                <label for="flip-7" class="btn-flip btn-back">Volver</label>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Producto 8 -->
+                    <article class="product-card" data-marca="orion" data-material="acero">
+                        <input type="checkbox" id="flip-8" class="flip-checkbox">
+                        <div class="card-inner">
+                            <div class="card-front">
+                                <div class="product-image">
+                                    <img src="img/con8.jpg" alt="Cuchara de albañil de acero (8 o 9 pulgadas)">
+                                </div>
+                                <div class="product-info">
+                                    <h3 class="product-title">Cuchara de albañil de acero (6 o 7 pulgadas)</h3>
+                                    <span class="stock-status">Disponible</span>
+                                    <label for="flip-8" class="btn-flip">Ver descripción</label>
+                                </div>
+                            </div>
+                            <div class="card-back">
+                                <h3 class="back-title">Cuchara de albañil de acero (8 o 9 pulgadas)</h3>
+                                <p class="product-desc">Herramienta manual usada para aplicar, extender y alisar mortero o mezcla sobre bloques y paredes.</p>
+                                <label for="flip-8" class="btn-flip btn-back">Volver</label>
+                            </div>
+                        </div>
+                    </article>
+
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Boton de modo claro/oscuro -->
+<input type="checkbox" id="theme-toggle" class="theme-checkbox">
+
+<label for="theme-toggle" class="theme-btn">
+  <span class="moon-icon">🌙</span>
+  <span class="sun-icon">☀️</span>
+</label>
+
+    <!-- Pie de Página -->
+    <footer class="main-footer">
+        <p>© 2026 Ferremateriales Casa Blanca C.A. Todos los derechos reservados.</p>
+    </footer>
+
+</body>
+</html>

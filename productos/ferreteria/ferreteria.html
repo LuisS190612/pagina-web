@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Productos - Ferremateriales Casa Blanca C.A</title>
+    <link rel="icon" href="../../img/favicon/LogoFerrematerialesCasablancaC.A.png">
+    <link rel="stylesheet" href="ferreteria.css">
+    <!-- Iconos de FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- Encabezado Principal -->
+    <header class="main-header">
+        
+        <!-- Menú de Navegación Responsivo (Puro HTML y CSS) -->
+        <nav>
+            <div class="color_menu">
+                <div class="logo">
+                    <h1>Ferremateriales Casa Blanca C.A</h1>
+                </div>
+
+                <!-- Checkbox oculto para controlar el menú desplegable -->
+                <input type="checkbox" id="nav-toggle" class="nav-toggle">
+                
+                <!-- Botón hamburguesa (solo las 3 rayitas blancas) -->
+                <label for="nav-toggle" class="menu-toggle-btn" aria-label="Abrir menú">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </label>
+
+                <!-- Lista de enlaces -->
+                <ul class="nav-links">
+                    <li><strong><a href="../../Sitio_Web_Ferremateriales_Casa_Blanca.html"><i class="fa-solid fa-house"></i> Volver a Inicio</a></strong></li>
+                    <li><strong><a href="../electricidad/electricidad.html">Electricidad</a></strong></li>
+                    <li><strong><a href="../plomeria/plomeria.html">Plomería</a></strong></li>
+                    <li><strong><a href="../construccion/construccion.html">Construcción</a></strong></li>
+                    <li><strong><a href="../herramientas/herramientas.html">Herramientas</a></strong></li>
+                    <li><strong><a href="ferreteria.html">Ferretería General</a></strong></li>
+                </ul>
+            </div>
+        </nav>
+
+        <div class="header-container">
+            <!-- Barra de búsqueda -->
+            <div class="search-bar">
+                <input type="text" placeholder="Buscar en toda la tienda...">
+                <button type="button" aria-label="Buscar"><i class="fa-solid fa-magnifying-glass"></i></button>
+            </div>
+        </div>
+
+    </header>
+
+    <!-- Inputs de radio ocultos para controlar el filtrado de la barra lateral por CSS -->
+    <input type="radio" name="filtro-tienda" id="filtro-todos" checked class="filter-radio">
+    <input type="radio" name="filtro-tienda" id="filtro-orion" class="filter-radio">
+    <input type="radio" name="filtro-tienda" id="filtro-acero" class="filter-radio">
+    <input type="radio" name="filtro-tienda" id="filtro-galicia" class="filter-radio">
+
+    <!-- Contenido Principal -->
+    <main class="store-layout">
+        <h1 class="page-title">Herramientas de Ferretería General</h1>
+        <p class="subtitle">Organice su Ferretería : Compre Accesorios y Suministros Generales</p>
+
+        <div class="catalog-container">
+            <!-- Barra Lateral de Filtros Interactiva (Pura CSS) -->
+            <aside class="sidebar-filters">
+                <h2 class="titulo">Comprar por</h2>
+                <div class="filter-group">
+                    <h3 class="letras">Opciones de compra</h3>
+                    <ul>
+                        <li><label for="filtro-todos" class="filter-label">Ver todos</label></li>
+                        <li><label for="filtro-orion" class="filter-label">Marca: Orión</label></li>
+                        <li><label for="filtro-acero" class="filter-label">Material: Acero</label></li>
+                        <li><label for="filtro-galicia" class="filter-label">Marca: Galicia</label></li>
+                    </ul>
+                </div>
+            </aside>
+
+            <!-- Sección de Lista de Productos -->
+            <section class="products-section">
+                <div class="products-toolbar">
+                    <span class="item-count">8 artículos</span>
+                </div>
+
+                <!-- Grilla de Tarjetas de Productos -->
+                <div class="products-grid">
+                    
+                    <!-- Producto 1 -->
+                    <article class="product-card" data-marca="orion" data-material="acero">
+                        <input type="checkbox" id="flip-1" class="flip-checkbox">
+                        <div class="card-inner">
+                            <div class="card-front">
+                                <div class="product-image">
+                                    <img src="img/fer1.jpg" alt="Cerradura de pomo cilíndrica para puerta">
+                                </div>
+                                <div class="product-info">
+                                    <h3 class="product-title">Cerradura de pomo cilíndrica para puerta COVO</h3>
+                                    <label for="flip-1" class="btn-flip">Ver descripción</label>
+                                </div>
+                            </div>
+                            <div class="card-back">
+                                <h3 class="back-title">Cerradura de pomo cilíndrica para puerta COVO</h3>
+                                <p class="product-desc">Mecanismo básico de seguridad y apertura para puertas interiores o de habitaciones.</p>
+                                <label for="flip-1" class="btn-flip btn-back">Volver</label>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Producto 2 -->
+                    <article class="product-card" data-marca="galicia" data-material="cromado">
+                        <input type="checkbox" id="flip-2" class="flip-checkbox">
+                        <div class="card-inner">
+                            <div class="card-front">
+                                <div class="product-image">
+                                    <img src="img/fer2.jpg" alt="Candado de bronce laminado (40 mm o 50 mm)">
+                                </div>
+                                <div class="product-info">
+                                    <h3 class="product-title">Candado de bronce (40 mm o 50 mm) DYLLU</h3>
+                                    <label for="flip-2" class="btn-flip">Ver descripción</label>
+                                </div>
+                            </div>
+                            <div class="card-back">
+                                <h3 class="back-title">Candado de bronce (40 mm o 50 mm) DYLLU</h3>
+                                <p class="product-desc">Candado portátil de seguridad con arco de acero endurecido para rejas, portones y depósitos.</p>
+                                <label for="flip-2" class="btn-flip btn-back">Volver</label>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Producto 3 -->
+                    <article class="product-card" data-marca="orion" data-material="acero">
+                        <input type="checkbox" id="flip-3" class="flip-checkbox">
+                        <div class="card-inner">
+                            <div class="card-front">
+                                <div class="product-image">
+                                    <img src="img/fer3.jpg" alt="Tornillo autorroscante para drywall (punta aguda)">
+                                </div>
+                                <div class="product-info">
+                                    <h3 class="product-title">Tornillo drywall 1 5/8" COVO</h3>
+                                    <label for="flip-3" class="btn-flip">Ver descripción</label>
+                                </div>
+                            </div>
+                            <div class="card-back">
+                                <h3 class="back-title">Tornillo drywall 1 5/8" COVO</h3>
+                                <p class="product-desc">Tornillo de alta rotación para láminas de yeso, madera y perfiles metálicos delgados.</p>
+                                <label for="flip-3" class="btn-flip btn-back">Volver</label>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Producto 4 -->
+                    <article class="product-card" data-marca="galicia" data-material="cromado">
+                        <input type="checkbox" id="flip-4" class="flip-checkbox">
+                        <div class="card-inner">
+                            <div class="card-front">
+                                <div class="product-image">
+                                    <img src="img/fer4.jpg" alt="Ramplug (tarugo) plástico de expansión (1/4 o 3/8 pulgada)">
+                                </div>
+                                <div class="product-info">
+                                    <h3 class="product-title">Ramplug azul 5/16" por bolsa(100und) EXXEL</h3>
+                                    <label for="flip-4" class="btn-flip">Ver descripción</label>
+                                </div>
+                            </div>
+                            <div class="card-back">
+                                <h3 class="back-title">Ramplug azul 5/16" por bolsa(100und) EXXEL</h3>
+                                <p class="product-desc">Taco de anclaje que permite fijar tornillos de forma firme en paredes de bloque o concreto.</p>
+                                <label for="flip-4" class="btn-flip btn-back">Volver</label>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Producto 5 -->
+                    <article class="product-card" data-marca="aqua" data-material="metal">
+                        <input type="checkbox" id="flip-5" class="flip-checkbox">
+                        <div class="card-inner">
+                            <div class="card-front">
+                                <div class="product-image">
+                                    <img src="img/fer5.jpg" alt="Cartucho de silicón transparente antihongos">
+                                </div>
+                                <div class="product-info">
+                                    <h3 class="product-title">Cartucho de silicón transparente antihongos GRIVEN</h3>
+                                    <label for="flip-5" class="btn-flip">Ver descripción</label>
+                                </div>
+                            </div>
+                            <div class="card-back">
+                                <h3 class="back-title">Cartucho de silicón transparente antihongos GRIVEN</h3>
+                                <p class="product-desc">Sellador elástico resistente a la humedad usado en juntas de vidrios, lavamanos, fregaderos y ventanas.</p>
+                                <label for="flip-5" class="btn-flip btn-back">Volver</label>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Producto 6 -->
+                    <article class="product-card" data-marca="galicia" data-material="cromado">
+                        <input type="checkbox" id="flip-6" class="flip-checkbox">
+                        <div class="card-inner">
+                            <div class="card-front">
+                                <div class="product-image">
+                                    <img src="img/fer6.jpg" alt="Pega epóxica de dos componentes (soldadura en frío)">
+                                </div>
+                                <div class="product-info">
+                                    <h3 class="product-title">Pega epóxica de dos componentes (soldadura en frío) COVO</h3>
+                                    <span class="stock-status">Disponible</span>
+                                    <label for="flip-6" class="btn-flip">Ver descripción</label>
+                                </div>
+                            </div>
+                            <div class="card-back">
+                                <h3 class="back-title">Pega epóxica de dos componentes (soldadura en frío) COVO</h3>
+                                <p class="product-desc">Adhesivo estructural de alta resistencia para reparar piezas metálicas, plásticas o cerámicas.</p>
+                                <label for="flip-6" class="btn-flip btn-back">Volver</label>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Producto 7 -->
+                    <article class="product-card" data-marca="aqua" data-material="metal">
+                        <input type="checkbox" id="flip-7" class="flip-checkbox">
+                        <div class="card-inner">
+                            <div class="card-front">
+                                <div class="product-image">
+                                    <img src="img/fer7.jpg" alt="Disco abrasivo de corte fino para metal (4 1/2 pulgadas)">
+                                </div>
+                                <div class="product-info">
+                                    <h3 class="product-title">Disco abrasivo de corte fino para metal (4 1/2") COVO</h3>
+                                    <span class="stock-status">Disponible</span>
+                                    <label for="flip-7" class="btn-flip">Ver descripción</label>
+                                </div>
+                            </div>
+                            <div class="card-back">
+                                <h3 class="back-title">Disco abrasivo de corte fino para metal (4 1/2 pulgadas) COVO</h3>
+                                <p class="product-desc">Consumible de alta rotación para esmeril angular utilizado en cortes limpios de hierro y acero.</p>
+                                <label for="flip-7" class="btn-flip btn-back">Volver</label>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Producto 8 -->
+                    <article class="product-card" data-marca="orion" data-material="acero">
+                        <input type="checkbox" id="flip-8" class="flip-checkbox">
+                        <div class="card-inner">
+                            <div class="card-front">
+                                <div class="product-image">
+                                    <img src="img/fer8.jpg" alt="Pliego de papel de lija al agua (grano 120 o 240)">
+                                </div>
+                                <div class="product-info">
+                                    <h3 class="product-title">Pliego de papel de lija al agua (grano 120 o 240 3M)</h3>
+                                    <span class="stock-status">Disponible</span>
+                                    <label for="flip-8" class="btn-flip">Ver descripción</label>
+                                </div>
+                            </div>
+                            <div class="card-back">
+                                <h3 class="back-title">Pliego de papel de lija al agua (grano 120 o 240) 3M</h3>
+                                <p class="product-desc">Material abrasivo flexible para desbastar, alisar y preparar superficies de madera, metal o masilla antes de pintar.</p>
+                                <label for="flip-8" class="btn-flip btn-back">Volver</label>
+                            </div>
+                        </div>
+                    </article>
+
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Boton de modo claro/oscuro -->
+<input type="checkbox" id="theme-toggle" class="theme-checkbox">
+
+<label for="theme-toggle" class="theme-btn">
+  <span class="moon-icon">🌙</span>
+  <span class="sun-icon">☀️</span>
+</label>
+
+    <!-- Pie de Página -->
+    <footer class="main-footer">
+        <p>© 2026 Ferremateriales Casa Blanca C.A. Todos los derechos reservados.</p>
+    </footer>
+
+</body>
+</html>

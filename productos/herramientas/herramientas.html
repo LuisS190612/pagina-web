@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Productos - Ferremateriales Casa Blanca C.A</title>
+    <link rel="icon" href="../../img/favicon/LogoFerrematerialesCasablancaC.A.png">
+    <link rel="stylesheet" href="herramientas.css">
+    <!-- Iconos de FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- Encabezado Principal -->
+    <header class="main-header">
+        
+        <!-- Menú de Navegación Responsivo (Puro HTML y CSS) -->
+        <nav>
+            <div class="color_menu">
+                <div class="logo">
+                    <h1>Ferremateriales Casa Blanca C.A</h1>
+                </div>
+
+                <!-- Checkbox oculto para controlar el menú desplegable -->
+                <input type="checkbox" id="nav-toggle" class="nav-toggle">
+                
+                <!-- Botón hamburguesa (solo las 3 rayitas blancas) -->
+                <label for="nav-toggle" class="menu-toggle-btn" aria-label="Abrir menú">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </label>
+
+                <!-- Lista de enlaces -->
+                <ul class="nav-links">
+                    <li><strong><a href="../../Sitio_Web_Ferremateriales_Casa_Blanca.html"><i class="fa-solid fa-house"></i> Volver a Inicio</a></strong></li>
+                    <li><strong><a href="../electricidad/electricidad.html">Electricidad</a></strong></li>
+                    <li><strong><a href="../plomeria/plomeria.html">Plomería</a></strong></li>
+                    <li><strong><a href="../construccion/construccion.html">Construcción</a></strong></li>
+                    <li><strong><a href="herramientas.html">Herramientas</a></strong></li>
+                    <li><strong><a href="../ferreteria/ferreteria.html">Ferretería General</a></strong></li>
+                </ul>
+            </div>
+        </nav>
+
+        <div class="header-container">
+            <!-- Barra de búsqueda -->
+            <div class="search-bar">
+                <input type="text" placeholder="Buscar en toda la tienda...">
+                <button type="button" aria-label="Buscar"><i class="fa-solid fa-magnifying-glass"></i></button>
+            </div>
+        </div>
+
+    </header>
+
+    <!-- Inputs de radio ocultos para controlar el filtrado de la barra lateral por CSS -->
+    <input type="radio" name="filtro-tienda" id="filtro-todos" checked class="filter-radio">
+    <input type="radio" name="filtro-tienda" id="filtro-orion" class="filter-radio">
+    <input type="radio" name="filtro-tienda" id="filtro-acero" class="filter-radio">
+    <input type="radio" name="filtro-tienda" id="filtro-galicia" class="filter-radio">
+
+    <!-- Contenido Principal -->
+    <main class="store-layout">
+        <h1 class="page-title">Herramientas</h1>
+        <p class="subtitle">Organice sus Herramientas : Compre Herramientas y Equipos para su Trabajo</p>
+
+        <div class="catalog-container">
+            <!-- Barra Lateral de Filtros Interactiva (Pura CSS) -->
+            <aside class="sidebar-filters">
+                <h2 class="titulo">Comprar por</h2>
+                <div class="filter-group">
+                    <h3 class="letras">Opciones de compra</h3>
+                    <ul>
+                        <li><label for="filtro-todos" class="filter-label">Ver todos</label></li>
+                        <li><label for="filtro-orion" class="filter-label">Marca: Orión</label></li>
+                        <li><label for="filtro-acero" class="filter-label">Material: Acero</label></li>
+                        <li><label for="filtro-galicia" class="filter-label">Marca: Galicia</label></li>
+                    </ul>
+                </div>
+            </aside>
+
+            <!-- Sección de Lista de Productos -->
+            <section class="products-section">
+                <div class="products-toolbar">
+                    <span class="item-count">8 artículos</span>
+                </div>
+
+                <!-- Grilla de Tarjetas de Productos -->
+                <div class="products-grid">
+                    
+                    <!-- Producto 1 -->
+                    <article class="product-card" data-marca="orion" data-material="acero">
+                        <input type="checkbox" id="flip-1" class="flip-checkbox">
+                        <div class="card-inner">
+                            <div class="card-front">
+                                <div class="product-image">
+                                    <img src="img/her1.jpg" alt="Taladro percutor eléctrico de 1/2 pulgada">
+                                </div>
+                                <div class="product-info">
+                                    <h3 class="product-title">Taladro percutor eléctrico de 1/2 pulgada</h3>
+                                    <label for="flip-1" class="btn-flip">Ver descripción</label>
+                                </div>
+                            </div>
+                            <div class="card-back">
+                                <h3 class="back-title">Taladro percutor eléctrico de 1/2 pulgada</h3>
+                                <p class="product-desc">Herramienta eléctrica versátil para perforar madera, metal y mampostería en trabajos domésticos o de obra.</p>
+                                <label for="flip-1" class="btn-flip btn-back">Volver</label>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Producto 2 -->
+                    <article class="product-card" data-marca="galicia" data-material="cromado">
+                        <input type="checkbox" id="flip-2" class="flip-checkbox">
+                        <div class="card-inner">
+                            <div class="card-front">
+                                <div class="product-image">
+                                    <img src="img/her2.jpg" alt="Esmeril angular (amoladora) de 4 1/2 pulgadas">
+                                </div>
+                                <div class="product-info">
+                                    <h3 class="product-title">Esmeril angular (amoladora) de 4 1/2 pulgadas</h3>
+                                    <label for="flip-2" class="btn-flip">Ver descripción</label>
+                                </div>
+                            </div>
+                            <div class="card-back">
+                                <h3 class="back-title">Esmeril angular (amoladora) de 4 1/2 pulgadas</h3>
+                                <p class="product-desc">Equipo eléctrico utilizado para cortar, desbastar y pulir metales, concreto o cerámica con distintos discos.</p>
+                                <label for="flip-2" class="btn-flip btn-back">Volver</label>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Producto 3 -->
+                    <article class="product-card" data-marca="orion" data-material="acero">
+                        <input type="checkbox" id="flip-3" class="flip-checkbox">
+                        <div class="card-inner">
+                            <div class="card-front">
+                                <div class="product-image">
+                                    <img src="img/her3.jpg" alt="Juego de destornilladores (punta plana y de estría/Phillips)">
+                                </div>
+                                <div class="product-info">
+                                    <h3 class="product-title">Juego de destornilladores (punta plana y de estría/Phillips)</h3>
+                                    <label for="flip-3" class="btn-flip">Ver descripción</label>
+                                </div>
+                            </div>
+                            <div class="card-back">
+                                <h3 class="back-title">Juego de destornilladores (punta plana y de estría/Phillips)</h3>
+                                <p class="product-desc">Set manual esencial con puntas imantadas y mangos aislados para apretar o aflojar tornillos.</p>
+                                <label for="flip-3" class="btn-flip btn-back">Volver</label>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Producto 4 -->
+                    <article class="product-card" data-marca="galicia" data-material="cromado">
+                        <input type="checkbox" id="flip-4" class="flip-checkbox">
+                        <div class="card-inner">
+                            <div class="card-front">
+                                <div class="product-image">
+                                    <img src="img/her4.jpg" alt="Alicate universal de 8 pulgadas (aislado)">
+                                </div>
+                                <div class="product-info">
+                                    <h3 class="product-title">Alicate universal de 8 pulgadas (aislado)</h3>
+                                    <label for="flip-4" class="btn-flip">Ver descripción</label>
+                                </div>
+                            </div>
+                            <div class="card-back">
+                                <h3 class="back-title">Alicate universal de 8 pulgadas (aislado)</h3>
+                                <p class="product-desc">Herramienta manual multifunción para sujetar piezas, doblar alambres y cortar cables eléctricos.</p>
+                                <label for="flip-4" class="btn-flip btn-back">Volver</label>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Producto 5 -->
+                    <article class="product-card" data-marca="aqua" data-material="metal">
+                        <input type="checkbox" id="flip-5" class="flip-checkbox">
+                        <div class="card-inner">
+                            <div class="card-front">
+                                <div class="product-image">
+                                    <img src="img/her5.jpg" alt="Llave ajustable (llave inglesa o francesa) de 10 pulgadas">
+                                </div>
+                                <div class="product-info">
+                                    <h3 class="product-title">Llave ajustable (llave inglesa o francesa) de 10 pulgadas</h3>
+                                    <label for="flip-5" class="btn-flip">Ver descripción</label>
+                                </div>
+                            </div>
+                            <div class="card-back">
+                                <h3 class="back-title">Llave ajustable (llave inglesa o francesa) de 10 pulgadas</h3>
+                                <p class="product-desc">Llave de boca móvil que se adapta a diferentes medidas de tuercas y tornillos hexagonales.</p>
+                                <label for="flip-5" class="btn-flip btn-back">Volver</label>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Producto 6 -->
+                    <article class="product-card" data-marca="galicia" data-material="cromado">
+                        <input type="checkbox" id="flip-6" class="flip-checkbox">
+                        <div class="card-inner">
+                            <div class="card-front">
+                                <div class="product-image">
+                                    <img src="img/her6.jpg" alt="Martillo de uña curva con mango de fibra o madera (16 oz)">
+                                </div>
+                                <div class="product-info">
+                                    <h3 class="product-title">Martillo de uña curva con mango de fibra o madera (16 oz)</h3>
+                                    <span class="stock-status">Disponible</span>
+                                    <label for="flip-6" class="btn-flip">Ver descripción</label>
+                                </div>
+                            </div>
+                            <div class="card-back">
+                                <h3 class="back-title">Martillo de uña curva con mango de fibra o madera (16 oz)</h3>
+                                <p class="product-desc">Herramienta básica de golpeo para clavar y extraer clavos en carpintería y reparaciones generales.</p>
+                                <label for="flip-6" class="btn-flip btn-back">Volver</label>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Producto 7 -->
+                    <article class="product-card" data-marca="aqua" data-material="metal">
+                        <input type="checkbox" id="flip-7" class="flip-checkbox">
+                        <div class="card-inner">
+                            <div class="card-front">
+                                <div class="product-image">
+                                    <img src="img/her7.jpg" alt="Cinta métrica (flexómetro) retráctil de 5 metros">
+                                </div>
+                                <div class="product-info">
+                                    <h3 class="product-title">Cinta métrica (flexómetro) retráctil de 5 metros</h3>
+                                    <span class="stock-status">Disponible</span>
+                                    <label for="flip-7" class="btn-flip">Ver descripción</label>
+                                </div>
+                            </div>
+                            <div class="card-back">
+                                <h3 class="back-title">Cinta métrica (flexómetro) retráctil de 5 metros</h3>
+                                <p class="product-desc">Instrumento de medición indispensable con carcasa resistente y freno para tomar medidas precisas.</p>
+                                <label for="flip-7" class="btn-flip btn-back">Volver</label>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Producto 8 -->
+                    <article class="product-card" data-marca="orion" data-material="acero">
+                        <input type="checkbox" id="flip-8" class="flip-checkbox">
+                        <div class="card-inner">
+                            <div class="card-front">
+                                <div class="product-image">
+                                    <img src="img/her8.jpg" alt="Nivel de burbuja magnético de aluminio (24 pulgadas)">
+                                </div>
+                                <div class="product-info">
+                                    <h3 class="product-title">Nivel de burbuja magnético de aluminio (24 pulgadas)</h3>
+                                    <span class="stock-status">Disponible</span>
+                                    <label for="flip-8" class="btn-flip">Ver descripción</label>
+                                </div>
+                            </div>
+                            <div class="card-back">
+                                <h3 class="back-title">Nivel de burbuja magnético de aluminio (24 pulgadas)</h3>
+                                <p class="product-desc">Herramienta de comprobación para verificar la horizontalidad y verticalidad en instalaciones y albañilería.</p>
+                                <label for="flip-8" class="btn-flip btn-back">Volver</label>
+                            </div>
+                        </div>
+                    </article>
+
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Boton de modo claro/oscuro -->
+<input type="checkbox" id="theme-toggle" class="theme-checkbox">
+
+<label for="theme-toggle" class="theme-btn">
+  <span class="moon-icon">🌙</span>
+  <span class="sun-icon">☀️</span>
+</label>
+
+    <!-- Pie de Página -->
+    <footer class="main-footer">
+        <p>© 2026 Ferremateriales Casa Blanca C.A. Todos los derechos reservados.</p>
+    </footer>
+
+</body>
+</html>

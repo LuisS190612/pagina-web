@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Productos - Ferremateriales Casa Blanca C.A</title>
+    <link rel="icon" href="../../img/favicon/LogoFerrematerialesCasablancaC.A.png">
+    <link rel="stylesheet" href="plomeria.css">
+    <!-- Iconos de FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- Encabezado Principal -->
+    <header class="main-header">
+        
+        <!-- Menú de Navegación Responsivo (Puro HTML y CSS) -->
+        <nav>
+            <div class="color_menu">
+                <div class="logo">
+                    <h1>Ferremateriales Casa Blanca C.A</h1>
+                </div>
+
+                <!-- Checkbox oculto para controlar el menú desplegable -->
+                <input type="checkbox" id="nav-toggle" class="nav-toggle">
+                
+                <!-- Botón hamburguesa (solo las 3 rayitas blancas) -->
+                <label for="nav-toggle" class="menu-toggle-btn" aria-label="Abrir menú">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </label>
+
+                <!-- Lista de enlaces -->
+                <ul class="nav-links">
+                    <li><strong><a href="../../Sitio_Web_Ferremateriales_Casa_Blanca.html"><i class="fa-solid fa-house"></i> Volver a Inicio</a></strong></li>
+                    <li><strong><a href="../electricidad/electricidad.html">Electricidad</a></strong></li>
+                    <li><strong><a href="plomeria.html">Plomería</a></strong></li>
+                    <li><strong><a href="../construccion/construccion.html">Construcción</a></strong></li>
+                    <li><strong><a href="../herramientas/herramientas.html">Herramientas</a></strong></li>
+                    <li><strong><a href="../ferreteria/ferreteria.html">Ferretería General</a></strong></li>
+                </ul>
+            </div>
+        </nav>
+
+        <div class="header-container">
+            <!-- Barra de búsqueda -->
+            <div class="search-bar">
+                <input type="text" placeholder="Buscar en toda la tienda...">
+                <button type="button" aria-label="Buscar"><i class="fa-solid fa-magnifying-glass"></i></button>
+            </div>
+        </div>
+
+    </header>
+
+    <!-- Inputs de radio ocultos para controlar el filtrado de la barra lateral por CSS -->
+    <input type="radio" name="filtro-tienda" id="filtro-todos" checked class="filter-radio">
+    <input type="radio" name="filtro-tienda" id="filtro-orion" class="filter-radio">
+    <input type="radio" name="filtro-tienda" id="filtro-acero" class="filter-radio">
+    <input type="radio" name="filtro-tienda" id="filtro-galicia" class="filter-radio">
+
+    <!-- Contenido Principal -->
+    <main class="store-layout">
+        <h1 class="page-title">Herramientas de Plomería</h1>
+        <p class="subtitle">Organice la Plomería : Compre Accesorios para la Instalacion de Plomería</p>
+
+        <div class="catalog-container">
+            <!-- Barra Lateral de Filtros Interactiva (Pura CSS) -->
+            <aside class="sidebar-filters">
+                <h2 class="titulo">Comprar por</h2>
+                <div class="filter-group">
+                    <h3 class="letras">Opciones de compra</h3>
+                    <ul>
+                        <li><label for="filtro-todos" class="filter-label">Ver todos</label></li>
+                        <li><label for="filtro-orion" class="filter-label">Marca: Orión</label></li>
+                        <li><label for="filtro-acero" class="filter-label">Material: Acero</label></li>
+                        <li><label for="filtro-galicia" class="filter-label">Marca: Galicia</label></li>
+                    </ul>
+                </div>
+            </aside>
+
+            <!-- Sección de Lista de Productos -->
+            <section class="products-section">
+                <div class="products-toolbar">
+                    <span class="item-count">8 artículos</span>
+                </div>
+
+                <!-- Grilla de Tarjetas de Productos -->
+                <div class="products-grid">
+                    
+                    <!-- Producto 1 -->
+                    <article class="product-card" data-marca="orion" data-material="acero">
+                        <input type="checkbox" id="flip-1" class="flip-checkbox">
+                        <div class="card-inner">
+                            <div class="card-front">
+                                <div class="product-image">
+                                    <img src="img/plo1.jpg" alt="Tubo PVC hidráulico de 1/2 pulgada (agua fría)">
+                                </div>
+                                <div class="product-info">
+                                    <h3 class="product-title">Tubo PVC azul de rosca de 1/2" (agua fría)</h3>
+                                    <label for="flip-1" class="btn-flip">Ver descripción</label>
+                                </div>
+                            </div>
+                            <div class="card-back">
+                                <h3 class="back-title">Tubo PVC azul de rosca de 1/2" (agua fría)</h3>
+                                <p class="product-desc">Tubería rígida estándar utilizada para la distribución de agua potable en viviendas.</p>
+                                <label for="flip-1" class="btn-flip btn-back">Volver</label>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Producto 2 -->
+                    <article class="product-card" data-marca="galicia" data-material="cromado">
+                        <input type="checkbox" id="flip-2" class="flip-checkbox">
+                        <div class="card-inner">
+                            <div class="card-front">
+                                <div class="product-image">
+                                    <img src="img/plo2.jpg" alt="Codo PVC liso de 90 grados (1/2 pulgada)">
+                                </div>
+                                <div class="product-info">
+                                    <h3 class="product-title">Codo 1/2" x 90° galvanizado</h3>
+                                    <label for="flip-2" class="btn-flip">Ver descripción</label>
+                                </div>
+                            </div>
+                            <div class="card-back">
+                                <h3 class="back-title">Codo 1/2" x 90° galvanizado</h3>
+                                <p class="product-desc">Conexión empleada para cambiar la dirección de las tuberías de agua fría en esquinas o bajantes.</p>
+                                <label for="flip-2" class="btn-flip btn-back">Volver</label>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Producto 3 -->
+                    <article class="product-card" data-marca="orion" data-material="acero">
+                        <input type="checkbox" id="flip-3" class="flip-checkbox">
+                        <div class="card-inner">
+                            <div class="card-front">
+                                <div class="product-image">
+                                    <img src="img/plo3.jpg" alt="Llave de paso de bola PVC o bronce de 1/2 pulgada">
+                                </div>
+                                <div class="product-info">
+                                    <h3 class="product-title">Llave de paso de bola de bronce de 1/2"</h3>
+                                    <label for="flip-3" class="btn-flip">Ver descripción</label>
+                                </div>
+                            </div>
+                            <div class="card-back">
+                                <h3 class="back-title">Llave de paso de bola PVC o bronce de 1/2 pulgada</h3>
+                                <p class="product-desc">Válvula de cierre rápido que permite cortar el suministro de agua para mantenimiento o emergencias.</p>
+                                <label for="flip-3" class="btn-flip btn-back">Volver</label>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Producto 4 -->
+                    <article class="product-card" data-marca="galicia" data-material="cromado">
+                        <input type="checkbox" id="flip-4" class="flip-checkbox">
+                        <div class="card-inner">
+                            <div class="card-front">
+                                <div class="product-image">
+                                    <img src="img/plo4.jpg" alt="Grifo o llave de lavamanos cromada">
+                                </div>
+                                <div class="product-info">
+                                    <h3 class="product-title">Grifo o llave de lavamanos cromada GRIVEN</h3>
+                                    <label for="flip-4" class="btn-flip">Ver descripción</label>
+                                </div>
+                            </div>
+                            <div class="card-back">
+                                <h3 class="back-title">Grifo o llave de lavamanos cromada GRIVEN</h3>
+                                <p class="product-desc">Pieza terminal para controlar la salida de agua en baños residenciales.</p>
+                                <label for="flip-4" class="btn-flip btn-back">Volver</label>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Producto 5 -->
+                    <article class="product-card" data-marca="aqua" data-material="metal">
+                        <input type="checkbox" id="flip-5" class="flip-checkbox">
+                        <div class="card-inner">
+                            <div class="card-front">
+                                <div class="product-image">
+                                    <img src="img/plo5.jpg" alt="Sifón flexible o rígido de PVC para fregadero (1 1/2 pulgadas)">
+                                </div>
+                                <div class="product-info">
+                                    <h3 class="product-title">Sifón rígido de PVC para fregadero (1 1/2")</h3>
+                                    <label for="flip-5" class="btn-flip">Ver descripción</label>
+                                </div>
+                            </div>
+                            <div class="card-back">
+                                <h3 class="back-title">Sifón rígido de PVC para fregadero (1 1/2")</h3>
+                                <p class="product-desc">Trampa de desagüe que evita el retorno de malos olores desde la tubería sanitaria.</p>
+                                <label for="flip-5" class="btn-flip btn-back">Volver</label>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Producto 6 -->
+                    <article class="product-card" data-marca="galicia" data-material="cromado">
+                        <input type="checkbox" id="flip-6" class="flip-checkbox">
+                        <div class="card-inner">
+                            <div class="card-front">
+                                <div class="product-image">
+                                    <img src="img/plo6.jpg" alt="Pegamento o soldadura líquida para PVC">
+                                </div>
+                                <div class="product-info">
+                                    <h3 class="product-title">Pegamento o soldadura líquida para PVC TUBRICA</h3>
+                                    <span class="stock-status">Disponible</span>
+                                    <label for="flip-6" class="btn-flip">Ver descripción</label>
+                                </div>
+                            </div>
+                            <div class="card-back">
+                                <h3 class="back-title">Pegamento o soldadura líquida para PVC TUBRICA</h3>
+                                <p class="product-desc">Pegamento indispensable para unir de forma hermética tubos y conexiones de PVC.</p>
+                                <label for="flip-6" class="btn-flip btn-back">Volver</label>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Producto 7 -->
+                    <article class="product-card" data-marca="aqua" data-material="metal">
+                        <input type="checkbox" id="flip-7" class="flip-checkbox">
+                        <div class="card-inner">
+                            <div class="card-front">
+                                <div class="product-image">
+                                    <img src="img/plo7.jpg" alt="Cinta de teflón para roscas (PTFE)">
+                                </div>
+                                <div class="product-info">
+                                    <h3 class="product-title">Cinta de teflón para roscas GRIVEN</h3>
+                                    <span class="stock-status">Disponible</span>
+                                    <label for="flip-7" class="btn-flip">Ver descripción</label>
+                                </div>
+                            </div>
+                            <div class="card-back">
+                                <h3 class="back-title">Cinta de teflón para roscas GRIVEN</h3>
+                                <p class="product-desc">Cinta selladora utilizada en uniones roscadas de llaves, niples y grifería para prevenir fugas.</p>
+                                <label for="flip-7" class="btn-flip btn-back">Volver</label>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Producto 8 -->
+                    <article class="product-card" data-marca="orion" data-material="acero">
+                        <input type="checkbox" id="flip-8" class="flip-checkbox">
+                        <div class="card-inner">
+                            <div class="card-front">
+                                <div class="product-image">
+                                    <img src="img/plo8.jpg" alt="Herraje o kit de descarga para poceta (WC)">
+                                </div>
+                                <div class="product-info">
+                                    <h3 class="product-title">Herraje o kit de descarga para poceta (WC) FERCO</h3>
+                                    <span class="stock-status">Disponible</span>
+                                    <label for="flip-8" class="btn-flip">Ver descripción</label>
+                                </div>
+                            </div>
+                            <div class="card-back">
+                                <h3 class="back-title">Herraje o kit de descarga para poceta (WC) FERCO</h3>
+                                <p class="product-desc">Conjunto interno de válvula de llenado y descarga para reparar tanques de inodoros.</p>
+                                <label for="flip-8" class="btn-flip btn-back">Volver</label>
+                            </div>
+                        </div>
+                    </article>
+
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Boton de modo claro/oscuro -->
+<input type="checkbox" id="theme-toggle" class="theme-checkbox">
+
+<label for="theme-toggle" class="theme-btn">
+  <span class="moon-icon">🌙</span>
+  <span class="sun-icon">☀️</span>
+</label>
+
+    <!-- Pie de Página -->
+    <footer class="main-footer">
+        <p>© 2026 Ferremateriales Casa Blanca C.A. Todos los derechos reservados.</p>
+    </footer>
+
+</body>
+</html>
